@@ -10,11 +10,11 @@
     <body>
       <div class="container">
         <div class="row">
-          <div class= "col-sm-3">
+          <div class= "col-sm-3 col-xs-12">
 
           <h4 style="padding:15% 0 10% 0">Some Favorites</h4>
 
-            <ul class="nav nav-pills nav-stacked">
+            <!-- <ul class="nav nav-pills nav-stacked">
               <li class="nav-item">
                 <a class="nav-link active" href="https://en.wikipedia.org/wiki/Celeriac">Celery Root</a>
               </li>
@@ -26,13 +26,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="https://en.wikipedia.org/wiki/Mushroom_poisoning">Killer Mushrooms</a>
               </li>
-            </ul>
+            </ul> -->
 
-            <!-- <nav class="nav nav-pills nav-stacked">
+            <nav class="nav nav-pills nav-stacked">
               <a class="nav-link active" href="#">Celery Root</a>
               <a class="nav-link" href="#">Spaghetti Squash</a>
               <a class="nav-link" href="#">Killer Mushrooms</a>
-            </nav> -->
+            </nav>
 
             <form style="margin-top:20%">
                 <div class="form-group">
@@ -43,7 +43,7 @@
 
           </div>
 
-          <div class="col-sm-9">
+          <div class="col-sm-9 col-xs-12">
             <div class="alert alert-danger" role="alert">
               <strong>Uh oh!</strong> Have you had your daily dose of veggies today??
             </div>
@@ -119,6 +119,41 @@
           </div>
         </div>
       </div>
+
+
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#vegetableModalCenter">
+        Launch Vegetable Modal
+      </button>
+
+      <div class="modal fade" id="vegetableModalCenter" tabindex="-1" role="dialog" aria-labelledby="vegetableModalCenter" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="vegetableModalCenterTitle">Do you like vegetables?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Vegetables are good for your health.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Continue</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+           </div>
+        </div>
+      </div>
+
+
+      <script src=”http://code.jquery.com/jquery.js”></script>
+      <script src=”https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js”>
+      </script>
+      <script>
+        $('#vegetableModalCenter').on('shown.bs.modal', function () {
+        $('#vegetableModalCenter').trigger('focus')
+      })
+      </script>
 
     </body>
 </html>
